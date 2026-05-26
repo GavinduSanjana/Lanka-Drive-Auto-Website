@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+        }
+
+        /* Make body inherit properly */
+        body {
+            background: inherit;
+            color: inherit;
+            margin: 0;
+        }
+    </style>
+
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>LankaDrive Auto Sales</h1>
+        <li><button class="themeBtn" onclick="toggleTheme()">Switch Theme</button></li>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="custom-title"> About Us</div>
+        <p class="custom-para">We are a leading car sales company in Colombo specializing in imported and local
+            vehicles.</p>
+
+        <div class="custom-title"> Mission</div>
+        <p class="custom-para">Provide high-quality vehicles at competitive prices.</p>
+
+        <div class="custom-title"> Vision</div>
+        <p class="custom-para">To be Sri Lanka's most trusted car dealer.</p>
+
+        <div class="custom-title"> Why Choose Us?</div>
+        <ul style="list-style: none;">
+            <li>
+                <p class="custom-para">Wide range of vehicles</p>
+            </li>
+            <li>
+                <p class="custom-para">Affordable Prices</p>
+            </li>
+            <li>
+                <p class="custom-para">Excellent customer service</p>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <div class="custom-title">Our Show Room</div><br>
+
+        <img src="carsaleimg1.jpg" width="60%"><br>
+        <img src="carsaleimg2.jpg" width="60%"><br>
+        <img src="carsaleimg3.jpg" width="60%">
+    </section>
+
+
+
+    <footer>
+        <p>55,Main Road,Colombo, Sri Lanka | 011-1234567 | info@lankadrive.lk</p>
+        <p>Follow us on social media</p>
+        <img src="fbicon.png" style="width: 35px;"><img src="youtubeicon.png" style="width: 35px;"><img
+            src="tiktokicon.png" style="width: 35px;"><br>
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+    </footer>
+</body>
+
+</html>

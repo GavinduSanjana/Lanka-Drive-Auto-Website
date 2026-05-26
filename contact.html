@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+        }
+
+        /* Make body inherit properly */
+        body {
+            background: inherit;
+            color: inherit;
+            margin: 0;
+        }
+    </style>
+
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <h1>LankaDrive Auto Sales</h1>
+        <li><button class="themeBtn" onclick="toggleTheme()">Switch Theme</button></li>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="custom-title">Contact Us</div>
+
+        <h3>Address: 55,Main Road,Colombo, Sri Lanka</h3>
+        <h3>Phone: 011-1234567</h3>
+        <h3>Email: info@lankadrive.lk</h3>
+
+        <br>
+        <br>
+
+        <h2>Inquiry Form</h2>
+        <br>
+
+        <form>
+            <input class="textbox" type="text" placeholder="Full Name"><br><br>
+            <input class="textbox" type="email" placeholder="Email"><br><br>
+            <input class="textbox" type="text" placeholder="Contact Number"><br><br>
+            <input class="textbox" type="text" placeholder="Vehicle Interested In"><br><br><br>
+
+            <label><input type="radio" name="purpose"> Buy Vehicle</label>
+            <label><input type="radio" name="purpose"> Test
+                Drive</label><br><br><br>
+
+
+            <label><input type="checkbox"> Subscribe to offers</label><br><br>
+
+            <textarea placeholder="Type Your Message" rows="8" cols="40" style="padding: 8px;"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+
+
+    <footer>
+        <p>55,Main Road,Colombo, Sri Lanka | 011-1234567 | info@lankadrive.lk</p>
+        <p>Follow us on social media</p>
+        <img src="fbicon.png" style="width: 35px;"><img src="youtubeicon.png" style="width: 35px;"><img
+            src="tiktokicon.png" style="width: 35px;"><br>
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+    </footer>
+
+</body>
+
+</html>

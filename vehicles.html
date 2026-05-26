@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+        }
+
+        /* Make body inherit properly */
+        body {
+            background: inherit;
+            color: inherit;
+            margin: 0;
+        }
+    </style>
+
+    <title>Vehicles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>LankaDrive Auto Sales</h1>
+        <li><button class="themeBtn" onclick="toggleTheme()">Switch Theme</button></li>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="custom-title"> Available Vehicles</div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="car1.jpg">
+                <h2>Toyota Aqua</h2>
+                <p>Year: 2018</p>
+                <p>Mileage: 50,000km</p>
+                <p>Auto</p>
+                <p>LKR 8,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="car2.jpg">
+                <h2>Honda Fit</h2>
+                <p>Year: 2017</p>
+                <p>Mileage: 40,000km</p>
+                <p>Auto</p>
+                <p>LKR 10,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="car3.jpg">
+                <h2>Toyota Corolla</h2>
+                <p>Year: 2016</p>
+                <p>Mileage: 45,000km</p>
+                <p>Auto</p>
+                <p>LKR 9,500,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="car4.jpg">
+                <h2>Nissan X-Trail</h2>
+                <p>Year: 2019</p>
+                <p>Mileage: 50,000km</p>
+                <p>Auto</p>
+                <p>LKR 12,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="car5.jpg">
+                <h2>Suzuki Alto</h2>
+                <p>Year: 2018</p>
+                <p>Mileage: 25,000km</p>
+                <p>Auto</p>
+                <p>LKR 7,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="car6.jpg">
+                <h2>BMW 320i</h2>
+                <p>Year: 2017</p>
+                <p>Mileage: 28,000km</p>
+                <p>Auto</p>
+                <p>LKR 20,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="Toyota_prius.jpeg">
+                <h2>Toyota Prius</h2>
+                <p>Year: 2018</p>
+                <p>Mileage: 10,000km</p>
+                <p>Auto</p>
+                <p>LKR 12,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+            <div class="card">
+                <img src="Honda_Vesel.jpg">
+                <h2>Honda Vesel</h2>
+                <p>Year: 2017</p>
+                <p>Mileage: 12,000km</p>
+                <p>Auto</p>
+                <p>LKR 15,000,000</p>
+                <button onclick="window.location.href='contact.html'">Inquire</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer>
+        <p>55,Main Road,Colombo, Sri Lanka | 011-1234567 | info@lankadrive.lk</p>
+        <p>Follow us on social media</p>
+        <img src="fbicon.png" style="width: 35px;"><img src="youtubeicon.png" style="width: 35px;"><img
+            src="tiktokicon.png" style="width: 35px;"><br>
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+        }
+
+        /* Make body inherit properly */
+        body {
+            background: inherit;
+            color: inherit;
+            margin: 0;
+        }
+    </style>
+
+    <title>LankaDrive Auto Sales</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>LankaDrive Auto Sales</h1>
+        <li><button class="themeBtn" onclick="toggleTheme()">Switch Theme</button></li>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="banner">Find Your Dream Car Today!</div>
+
+
+
+    <section>
+        <div class="custom-title"> Welcome to LankaDrive </div>
+
+        <h2>Your trusted partner for brand new, reconditioned, and used vehicles.</h2>
+    </section>
+
+    <section>
+        <div class="custom-title"> Featured Vehicles</div>
+        <p id="tooltip"></p>
+        <div class="card-container">
+            <div class="card" style="transform: none;">
+                <a href=" vehicles.html">
+                    <img src="Toyota_prius.jpeg"
+                        onmouseenter="setTimeout(function(){ displayInquire('Click for more info'); }, 150);"
+                        onmouseleave="displayNone();">
+                </a><br>
+
+                <h2>Toyota Prius</h2>
+                <p style="font-size: small; font-weight: 700;">LKR 9,500,000</p>
+                <br>
+
+            </div>
+
+            <div class="card" style="transform: none;">
+                <a href="vehicles.html">
+                    <img src="Honda_Vesel.jpg"
+                        onmouseenter="setTimeout(function(){ displayInquire('Click for more info'); }, 150);"
+                        onmouseleave="displayNone();">
+                </a><br>
+
+                <h2>Honda Vezel</h2>
+                <p style="font-size: small; font-weight: 700;">LKR 11,200,000</p>
+                <br>
+
+            </div>
+
+
+            <div class="card" style="transform: none;">
+                <a href="vehicles.html">
+                    <img src="car6.jpg"
+                        onmouseenter="setTimeout(function(){ displayInquire('Click for more info'); }, 150);"
+                        onmouseleave="displayNone();">
+                </a><br>
+
+                <h2>BMW 320i</h2>
+                <p style="font-size: small; font-weight: 700;">LKR 20,000,000</p>
+                <br>
+
+            </div>
+
+
+        </div>
+        <br>
+
+        <div class="custom-title"> Promotions</div>
+
+    </section>
+
+
+    <section class="promotion-container">
+        <div class="box">
+            <h2>Special discounts on <br><span
+                    style="color: brown; font-weight: bold; font-style: italic; font-size: larger;">Japanese</span>
+                imports
+                this month</h2><br>
+            <p style="font-weight: 900;">Grab this offer before it goes..!</p> <br>
+
+            <a href="vehicles.html">
+                <img src="promotion3.png" style="padding-top: 4px;" width="400" height="400">
+            </a>
+        </div>
+
+
+        <div class="box">
+
+            <h1 style="color: brown;font-family: Georgia, 'Times New Roman', Times, serif;">Fresh Stock Available!</h1>
+            <br>
+            <p style="font-weight: 800;">Handpicked, high-quality vehicles just arrived. Reserve today and enjoy
+                exclusive benefits.</p> <br>
+            <a href="vehicles.html">
+                <img src="promotion draft.png" style="padding-top: 4px;" width="400" height="400">
+            </a>
+
+        </div>
+
+        <div class="box">
+
+            <h2>Latest arrivals this month</h1>
+                <h1 style="color: red; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">Just
+                    For
+                    You !</h1><br>
+                <p style="font-weight: 800;">Check out our newest collection..!</p> <br>
+                <a href="vehicles.html">
+
+                    <img src="promotionimg2.png" style="padding-bottom: 16px;" width="400" height="411">
+                </a>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <section style="padding:20px">
+        <section style="background: url('carBg2.jpg')">
+
+            <div class="custom-title">Vehicle Gallery</div><br>
+            <div style="color: #ffffff;font-size: 1.30em; font-weight: bold; padding: 5px;">Witness our Exclusive
+                Vehicle Gallery!</div>
+        </section><br><br>
+
+        <div class="gallery" style="text-align: start;">
+
+            <img src="Toyota_prius.jpeg" style="margin-left: 20px;">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Toyota Prius</u></h1>
+                <p><b>Engine:</b> 2.0L 4 -Cylinder Hybrid (2ZR - FXE)</p>
+                <p><b>Power:</b> Up to 196 horsepower</p>
+                <p><b>Transmission:</b> Automatic</p>
+                <p><b>Seating Capacity:</b> 5 passengers</p>
+                <p><b>Top Speed:</b> ~180 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> 45 Liters</p><br>
+                <h4>Price: LKR 12,000,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+
+            <img src="Honda_Vesel.jpg" style="margin-left: 37px;">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Honda Vesel</u></h1>
+                <p><b>Engine:</b> 1.5L DOHC i-VTEC petrol</p>
+                <p><b>Power:</b> ~131-132 ps (96-97kW) </p>
+                <p><b>Transmission:</b> CVT or 7-Speed Dual Clutch Drive</p>
+                <p><b>Seating Capacity:</b> 5 passengers</p>
+                <p><b>Top Speed:</b> ~200 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> 40 Liters</p><br>
+                <h4>Price: LKR 15,000,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+        </div>
+
+    </section><br>
+
+    <section style="padding: 20px;">
+        <div class="gallery" style="text-align: start;">
+
+            <img src="car6.jpg" style="margin-left: 20px;">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>BMW 320i</u></h1>
+                <p><b>Engine:</b>2.0L TwinPower Turbo inline cylinder</p>
+                <p><b>Power:</b> 184 hp (135 kW) @ 5,000</p>
+                <p><b>Transmission:</b> 8-Speed automatic</p>
+                <p><b>Seating Capacity:</b> 4 passengers</p>
+                <p><b>Top Speed:</b> Approx. 235 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> ~59 Litres </p><br>
+                <h4>Price: LKR 20,000,000</h4><br>
+                <h4>Stock Availability: <span style="color: red; font-style: italic; font-weight: bolder;">Out of
+                        Stock</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+
+            <img src="AudiQ3.jpg">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Audi Q3</u></h1>
+                <p><b>Engine:</b>2.0L TFSI turbocharged 4-cylinder </p>
+                <p><b>Power:</b> 228 hp to 255 hp</p>
+                <p><b>Transmission:</b> 7-speed automatic</p>
+                <p><b>Seating Capacity:</b> 5 passengers</p>
+                <p><b>Top Speed:</b> ~200 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> 45 Liters</p><br>
+                <h4>Price: LKR 25,000,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+        </div>
+    </section><br>
+
+    <section style="padding: 20px;">
+        <div class="gallery" style="text-align: start;">
+
+            <img src="Benz C200.jpg" style="margin-left: 20px;">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Mercedes C200</u></h1>
+                <p><b>Engine:</b>3.5L TwinPower Turbo inline cylinder</p>
+                <p><b>Power:</b> 225 hp (135 kW) @ 5,000</p>
+                <p><b>Transmission:</b> 6-Speed automatic</p>
+                <p><b>Seating Capacity:</b> 6 passengers</p>
+                <p><b>Top Speed:</b> Approx. 250 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> ~59 Litres </p><br>
+                <h4>Price: LKR 22,500,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+
+            <img src="car4.jpg">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Nissan X-Trail</u></h1>
+                <p><b>Engine:</b>2.0L turbocharged 3-cylinder petrol </p>
+                <p><b>Power:</b> 175 hp to 190 hp</p>
+                <p><b>Transmission:</b> 7-speed automatic</p>
+                <p><b>Seating Capacity:</b> 6 passengers</p>
+                <p><b>Top Speed:</b> ~160 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> 35 Liters</p><br>
+                <h4>Price: LKR 12,000,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+        </div>
+    </section><br>
+
+    <section style="padding: 20px;">
+        <div class="gallery" style="text-align: start;">
+
+
+            <img src="car1.jpg" style="margin-left: 20px;">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Toyota Aqua</u></h1>
+                <p><b>Engine:</b>3.5L TwinPower Turbo inline cylinder </p>
+                <p><b>Power:</b> 220 hp (155 kW) @3000</p>
+                <p><b>Transmission:</b> automatic</p>
+                <p><b>Seating Capacity:</b> 4 passengers</p>
+                <p><b>Top Speed:</b> ~120 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> 40 Liters</p><br>
+                <h4>Price: LKR 8,000,000</h4><br>
+                <h4>Stock Availability: <span class="Availability-text">Available</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+
+            <img src="Hilux.jpeg">
+
+            <div style="display: block;">
+                <h1 class="gallery-text"><u>Toyota Hilux Rocco</u></h1>
+                <p><b>Engine:</b>5L Turbo inline cylinder disel</p>
+                <p><b>Power:</b> 275 hp (155 kW) @ 5,400</p>
+                <p><b>Transmission:</b> 6-Speed automatic</p>
+                <p><b>Seating Capacity:</b> 5 passengers</p>
+                <p><b>Top Speed:</b> Approx. 250 km/h</p>
+                <p><b>Fuel Tank Capacity:</b> ~60 Litres </p><br>
+                <h4>Price: LKR 32,500,000</h4><br>
+                <h4>Stock Availability: <span style="color: red; font-style: italic; font-weight: bolder;">Out of
+                        Stock</span></h4>
+
+                <button style="margin-left: 60px;" onclick="window.location.href='contact.html'">Inquire</button>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <script>
+        function displayInquire(message) {
+            var tooltip = document.getElementById("tooltip");
+            tooltip.innerText = message;
+            tooltip.style.display = "block";
+        }
+
+        function displayNone() {
+            document.getElementById("tooltip").textContent = "";
+        }
+
+    </script>
+
+
+
+    <br><br>
+    <footer>
+        <p>55,Main Road,Colombo, Sri Lanka | 011-1234567 | info@lankadrive.lk</p>
+        <p>Follow us on social media</p>
+        <img src="fbicon.png" style="width: 35px;"><img src="youtubeicon.png" style="width: 35px;"><img
+            src="tiktokicon.png" style="width: 35px;"><br>
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+    </footer>
+
+</body>
+
+</html>

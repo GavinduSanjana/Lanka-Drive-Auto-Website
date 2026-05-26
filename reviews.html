@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        (function () {
+            const theme = localStorage.getItem("theme");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+            }
+        })();
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        html.dark {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+        }
+
+        /* Make body inherit properly */
+        body {
+            background: inherit;
+            color: inherit;
+            margin: 0;
+        }
+    </style>
+    <title>Reviews</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>LankaDrive Auto Sales</h1>
+        <li><button class="themeBtn" onclick="toggleTheme()">Switch Theme</button></li>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+
+
+        <div class="custom-title">Customer Review</div>
+        <br><br>
+
+        <div class="card-container">
+
+            <div class="reviewcard">
+                <h3>Joshep Vijay</h3><br>
+                <p>Excellent service and quality cars!</p>
+                <p>⭐⭐⭐⭐⭐</p><br>
+                <p>Year : 2025</p>
+            </div>
+
+            <div class="reviewcard">
+                <h3>Ajith Kumar</h3><br>
+                <p>Very satisfied with my purchase.</p>
+                <p>⭐⭐⭐⭐</p><br>
+                <p>Year : 2024</p>
+            </div>
+
+            <div class="reviewcard">
+                <h3>Dhanush K. Raja</h3><br>
+                <p>Highly recommend LankaDrive!</p>
+                <p>⭐⭐⭐⭐⭐</p><br>
+                <p>Year : 2025</p>
+            </div>
+
+            <div class="reviewcard">
+                <h3>Pradeep Ranganathan</h3><br>
+                <p>Staff is very friendly and service is fantastic.</p>
+                <p>⭐⭐⭐⭐⭐</p><br>
+                <p>Year : 2026</p>
+            </div>
+
+        </div>
+
+    </section>
+    <br>
+
+    <section>
+
+        <h5>Customer Review Video Testimonial</h5><br>
+
+        <video width="500" height="300" controls autoplay="autoplay" loop="loop" muted="muted">
+
+            <source src="reviewTestimonial.mp4" type="video/mp4">
+
+            Your browser does not support the video. This video shows a Customer Review Testimonial
+
+        </video>
+
+    </section>
+
+
+    <footer>
+
+
+        <p>55,Main Road,Colombo, Sri Lanka | 011-1234567 | info@lankadrive.lk</p>
+        <p>Follow us on social media</p>
+        <img src="fbicon.png" style="width: 35px;"><img src="youtubeicon.png" style="width: 35px;"><img
+            src="tiktokicon.png" style="width: 35px;"><br>
+        <input type="email" placeholder="Subscribe to newsletter">
+        <button>Subscribe</button>
+    </footer>
+
+</body>
+
+</html>
